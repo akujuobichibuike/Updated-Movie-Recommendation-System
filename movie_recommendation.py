@@ -123,7 +123,7 @@ def index():
 
 if __name__ == '__main__':
     # Load and preprocess the movie dataset
-    dataset_path = r"C:\Users\WCLENG-9\Desktop\Web-App Projects\Movie Recommendation System\movies.csv"
+    dataset_path = "movies.csv"
     movies = load_and_preprocess_data(dataset_path)
     feature_vectors = vectorize_features(movies)
 
