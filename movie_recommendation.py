@@ -127,4 +127,4 @@ if __name__ == '__main__':
     movies = load_and_preprocess_data(dataset_path)
     feature_vectors = vectorize_features(movies)
 
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
