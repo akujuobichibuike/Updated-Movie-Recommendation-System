@@ -1,6 +1,6 @@
 # BUILDING A MOVIE RECOMMENDATION SYSTEM
 
-This is a self project done by me Chibuike Victor Akujuobi and reviewed by my friends Teyira Peter Geo-Needam & Emmanuel Ugochukwu. This project was done to enable us strengthen our skills in Python and Machine learning.
+This is a self-project done by me Chibuike Victor Akujuobi and reviewed by my friends Teyira Peter Geo-Needam and Emmanuel Ugochukwu. This project was done to enable us to strengthen our skills in Python and Machine learning.
 
 ## Project Overview
 This Movie Recommendation System is a web application that suggests movies based on user input. It combines content-based and collaborative filtering techniques to provide personalized movie recommendations. The system also fetches movie information from the OMDB API and provides links to YouTube trailers for the recommended movies.
@@ -21,7 +21,7 @@ This Movie Recommendation System is a web application that suggests movies based
 ## Access the Web App
 You can access the Movie Recommendation System web app by clicking on the following link:
 
-[Movie Recommendation System](#) _()_
+[Movie Recommendation System](#) _(https://chibuikeakujuobi-recommendation.onrender.com)_
 
 ## Feedback Welcome
 We value your feedback! If you have any suggestions, encounter issues, or would like to contribute to the project, please feel free to open an issue or pull request on our GitHub repository. Your input is essential in improving this movie recommendation system.
