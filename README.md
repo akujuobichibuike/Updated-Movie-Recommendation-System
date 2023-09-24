@@ -38,7 +38,7 @@ You can access the Movie Recommendation System web app by clicking on the follow
 [Movie Recommendation System](https://chibuikeakujuobi-recommendation.onrender.com)
 
 ### Feedback Welcome
-We value your feedback! If you have any suggestions, encounter issues, or would like to contribute to the project, please feel free to open an issue or pull request on our [GitHub repository](https://github.com/your-username/repo-name). Your input is essential in improving this movie recommendation system.
+We value your feedback! If you have any suggestions, encounter issues, or would like to contribute to the project, please feel free to open an issue or pull request on our [GitHub repository](https://github.com/akujuobichibuike/Updated-Movie-Recommendation-System). Your input is essential in improving this movie recommendation system.
 
 ### Future Enhancements
 We plan to continue enhancing the Movie Recommendation System in the following ways:
