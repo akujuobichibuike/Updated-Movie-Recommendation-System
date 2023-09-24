@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation App</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, h3, p, ul, li, form, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #e50914;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+        }
+
+        .search-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff5722;
+        }
+
+        .recommendations {
+            padding: 20px;
+        }
+
+        .movie-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .movie-card {
+            background-color: #222;
+            border-radius: 8px;
+            margin: 20px 0;
+            width: calc(30% - 20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+
+        .movie-card:hover { /* Add the hover effect */
+            background-color: #333; /* Change to your desired hover background color */
+            transform: translateY(-5px); /* Add a slight upward movement */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        .movie-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .movie-details {
+            padding: 15px;
+        }
+
+        .movie-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .genre, .released, .plot, .imdb-rating {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .trailer-link {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            .movie-card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .movie-card {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Movie Recommendations</h1>
+        <p>Discover your next favorite movie!</p>
+    </header>
+
+    <section class="search-section">
+        <form method="POST">
+            <input type="text" name="movie_name" placeholder="Search for a movie...">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="recommendations">
+        <h2>Recommended Movies</h2>
+        <ul class="movie-list">
+            {% for movie_info in recommendations %}
+            <li class="movie-card">
+                <img src="{{ movie_info.Poster }}" alt="Movie Poster">
+                <div class="movie-details">
+                    <h3>{{ movie_info.Title }}</h3>
+                    <p class="genre">Genre: {{ movie_info.Genre }}</p>
+                    <p class="released">Released: {{ movie_info.Released }}</p>
+                    <p class="plot">{{ movie_info.Plot }}</p>
+                    <p class="imdb-rating">IMDb Rating: {{ movie_info.imdbRating }}</p>
+                    <!-- Add the "Watch Trailer" link -->
+                    <p class="trailer-link"><a href="{{ movie_info.youtube_trailer_url }}" target="_blank">Watch Trailer</a></p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Movie Recommendation App</p>
+    </footer>
+</body>
+</html>
