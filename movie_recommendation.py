@@ -97,6 +97,11 @@ def hybrid_recommendations(movie_name, df, feature_vectors, cf_model=None, cf_we
 
     return sorted_combined_recommendations
 
+# Load and preprocess the movie dataset
+dataset_path = "movies.csv"
+movies = load_and_preprocess_data(dataset_path)
+feature_vectors = vectorize_features(movies)
+
 # Flask route
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -122,9 +127,4 @@ def index():
     return render_template('index.html', message='', movies=movies)
 
 if __name__ == '__main__':
-    # Load and preprocess the movie dataset
-    dataset_path = "movies.csv"
-    movies = load_and_preprocess_data(dataset_path)
-    feature_vectors = vectorize_features(movies)
-
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
